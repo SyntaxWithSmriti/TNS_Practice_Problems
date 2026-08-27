@@ -33,3 +33,27 @@ def build():
 
 tree = build()
 print(tree)
+
+
+# Get the rightmost and leftmost value
+
+def leftmost_value(node):
+    while node["left"] is not None:
+        node = node["left"]
+
+    return node["value"]
+
+def rightmost_value(node):
+    while node["right"] is not None:
+        node = node["right"]
+
+    return node["value"]
+
+
+left_most_value = leftmost_value(tree)
+print(f"The leftmost value is : {left_most_value}")
+
+right_most_value = rightmost_value(tree)
+print(f"The rightmost value is : {right_most_value}")
+
+
